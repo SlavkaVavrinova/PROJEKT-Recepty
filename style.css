@@ -1,20 +1,29 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	margin: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 .paticka {
-	text-align: center;
-	font-size: 14px;
-	color: silver;
+  text-align: center;
+  font-size: 14px;
+  color: silver;
 }
 
 .paticka a {
-	color: silver;
+  color: silver;
 }
 
 /* -------------------------------------------------- */
@@ -33,3 +42,103 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+
+h2 {
+  font-family: 'Releway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0;
+}
+
+.main__title {
+  font-size: 28px;
+}
+
+.main,
+.other {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__up,
+.other__up {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  background-image: url('images/salat.jpg');
+  background-size: cover;
+  min-height: 200px;
+}
+
+.other {
+  background-size: cover;
+  min-height: 90px;
+}
+
+.chlebicek {
+  background-image: url('images/chlebicek.jpg');
+}
+
+.tacos {
+  background-image: url('images/tacos.jpg');
+}
+
+.cizrna {
+  background-image: url('images/cizrna.jpg');
+}
+
+.burger {
+  background-image: url('images/burger.jpg');
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .main__title {
+    font-size: 36px;
+  }
+
+  .main {
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .other {
+    min-height: 150px;
+    flex-basis: 50%;
+    padding: 20px;
+  }
+
+  .other-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .main__title {
+    font-size: 48px;
+  }
+
+  .main {
+    min-height: 400px;
+  }
+
+  .other {
+    min-height: 200px;
+  }
+  .recipes {
+    display: flex;
+  }
+}
